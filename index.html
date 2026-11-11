@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MAISON LUXE – Túi xách & Giày dép cao cấp</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%9C%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--card:#fff;--ink:#16130f;--mut:#756e63;--line:#e7e1d6;--gold:#b8924a;--btn:#16130f;--btnt:#faf8f4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121110;--card:#1b1a18;--ink:#f3eee5;--mut:#a49c8e;--line:#2d2a26;--gold:#d2ab62;--btn:#f3eee5;--btnt:#121110;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121110;--card:#1b1a18;--ink:#f3eee5;--mut:#a49c8e;--line:#2d2a26;--gold:#d2ab62;--btn:#f3eee5;--btnt:#121110;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:'Playfair Display',Georgia,serif;font-weight:500;margin:0}
+button{font:inherit;cursor:pointer;color:inherit}input,select{font:inherit;color:inherit}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:16px}
+.logo{font-size:24px;letter-spacing:.18em;font-weight:700}.logo b{color:var(--gold)}
+.search{flex:1;max-width:420px;margin:0 auto;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:9px 16px;outline:none;width:100%}
+.ib{background:none;border:0;position:relative;padding:6px 8px;font-size:14px;display:flex;gap:6px;align-items:center}
+.cnt{background:var(--gold);color:#fff;border-radius:99px;font-size:11px;min-width:18px;height:18px;display:inline-grid;place-items:center;padding:0 5px}
+.hero{max-width:1200px;margin:24px auto 0;padding:0 20px}
+.hero>div{border-radius:20px;padding:56px 40px;background:linear-gradient(120deg,#1c1813,#3b2f1d 60%,#b8924a);color:#f8f1e3;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(30px,5vw,54px);max-width:560px;line-height:1.1}.hero p{max-width:440px;opacity:.85;margin:14px 0 22px}
+.btn{background:var(--btn);color:var(--btnt);border:0;border-radius:99px;padding:12px 24px;font-weight:600}
+.btn.gold{background:var(--gold);color:#fff}.btn.out{background:none;color:var(--ink);border:1px solid var(--ink)}.btn.full{width:100%}
+.wrap{max-width:1200px;margin:auto;padding:28px 20px 60px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:8px 18px}.chip.on{background:var(--btn);color:var(--btnt);border-color:var(--btn)}
+.sel{margin-left:auto;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:8px 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.art{position:relative;cursor:pointer;aspect-ratio:1}.art svg{width:100%;height:100%;display:block}
+.tag{position:absolute;left:12px;top:12px;background:var(--ink);color:var(--bg);font-size:11px;padding:3px 10px;border-radius:99px;letter-spacing:.05em}
+.heart{position:absolute;right:10px;top:10px;background:rgba(255,255,255,.85);color:#16130f;border:0;border-radius:50%;width:34px;height:34px;font-size:17px}
+.info{padding:14px 16px 18px}.brand{font-size:11px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.info h3{font-size:18px;margin:3px 0 6px;cursor:pointer}.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{font-weight:600}.old{color:var(--mut);text-decoration:line-through;font-weight:400;font-size:13px;margin-left:6px}.star{color:var(--gold);font-size:13px}
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40;display:flex;justify-content:center;align-items:center;padding:16px}
+.modal{background:var(--bg);border-radius:20px;max-width:880px;width:100%;max-height:90vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.modal .pad{padding:30px}.x{position:absolute;right:14px;top:10px;background:none;border:0;font-size:26px;z-index:2;color:var(--ink)}
+.opt{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}.sz{border:1px solid var(--line);background:var(--card);border-radius:10px;min-width:48px;padding:8px 12px}.sz.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.drawer{position:fixed;right:0;top:0;bottom:0;width:min(440px,100%);background:var(--bg);z-index:50;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.dh{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.db{flex:1;overflow:auto;padding:10px 22px}.df{padding:18px 22px;border-top:1px solid var(--line)}
+.li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.li .th{width:72px;height:72px;border-radius:10px;overflow:hidden;flex:none}.li .th svg{width:100%;height:100%}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:99px}.qty button{background:none;border:0;width:30px;height:28px;font-size:16px}
+.sum{display:flex;justify-content:space-between;margin:5px 0;color:var(--mut)}.sum.t{color:var(--ink);font-weight:600;font-size:17px}
+.f{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}.f input{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:10px 12px;width:100%}
+.cp{display:flex;gap:8px;margin:12px 0}.cp input{flex:1;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 12px;min-width:0}
+.toast{position:fixed;bottom:calc(24px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:11px 22px;border-radius:99px;z-index:90;font-size:14px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:46px}.feat div{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--card)}.feat b{display:block;margin-bottom:4px}
+footer{border-top:1px solid var(--line);background:var(--card);color:var(--mut);font-size:14px;margin-top:20px}
+.ft{max-width:1200px;margin:auto;padding:44px 20px 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:32px}
+.ft h4{font-family:Inter,system-ui,sans-serif;color:var(--ink);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 14px;font-weight:600}
+.ft a{display:block;padding:4px 0;cursor:pointer}.ft a:hover,.fb .lk:hover{color:var(--gold)}.fb .lk{cursor:pointer}
+.soc{display:flex;gap:8px;margin-top:16px}.soc span{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer}.soc span:hover{border-color:var(--gold);color:var(--gold)}
+.nl{display:flex;gap:8px;margin-top:14px}.nl input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:9px 14px}
+.fb{border-top:1px solid var(--line);max-width:1200px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;font-size:13px}
+.pay{display:flex;gap:6px}.pay span{border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:11px;font-weight:600;color:var(--ink);background:var(--bg)}
+@media(max-width:800px){.ft{grid-template-columns:1fr 1fr}}@media(max-width:520px){.ft{grid-template-columns:1fr}}
+.empty{text-align:center;color:var(--mut);padding:60px 0}
+.tag2{background:var(--gold);color:#fff;border-radius:99px;font-size:12px;padding:3px 12px}.tag2.bad{background:#8a8378}
+.pr{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--mut)}.pr input{width:78px;border:1px solid var(--line);background:var(--card);border-radius:10px;padding:7px 10px}
+.hero>div.h3{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:10px;padding:30px 40px;min-height:540px;background:radial-gradient(circle at 70% 45%,#4a3a22,#1a1612 62%)}
+.hcopy{position:relative;z-index:1}.cv{position:relative;height:480px}.cvc{position:absolute;inset:0}.cvc canvas{display:block;width:100%;height:100%}.cvc svg{width:100%;height:100%;border-radius:20px}
+.cvn{position:absolute;left:0;right:0;bottom:4px;display:flex;justify-content:center;align-items:center;gap:14px;color:#f8f1e3;font-size:14px}.cvn button{color:#f8f1e3;font-size:24px}
+.mq{overflow:hidden;border-block:1px solid var(--line);margin-top:28px;padding:14px 0;white-space:nowrap}.mq div{display:inline-block;animation:mq 30s linear infinite;font-family:'Playfair Display',serif;letter-spacing:.2em;color:var(--mut);font-size:18px}.mq span{margin:0 28px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.tiles{max-width:1200px;margin:34px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tile{border:1px solid var(--line);border-radius:18px;background:var(--card);cursor:pointer;overflow:hidden;transition:transform .15s ease-out,box-shadow .3s}.tile:hover{box-shadow:0 24px 40px rgba(0,0,0,.18)}.ta{aspect-ratio:1.5;overflow:hidden}.ta svg{width:100%;height:100%}.tt{padding:14px 18px;display:flex;justify-content:space-between;align-items:center}.tt span{color:var(--gold);font-size:13px}
+@media(max-width:700px){.hero>div.h3{grid-template-columns:1fr;padding:20px 20px 30px;min-height:0}.cv{height:340px;order:-1}.tiles{grid-template-columns:1fr}}
+@media(max-width:700px){.modal{grid-template-columns:1fr}.hero>div{padding:36px 22px}.logo{font-size:18px}.ib span.l{display:none}.sel{margin-left:0}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const {useState,useMemo,useEffect}=React;const html=htm.bind(React.createElement);
+const fmt=n=>n.toLocaleString('vi-VN')+'₫';
+const ls=(k,v)=>{try{if(v===undefined){const x=localStorage.getItem(k);return x?JSON.parse(x):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
+const COL={'Đen':'#1d1b19','Kem':'#e8dcc4','Đỏ rượu':'#7a1f2b','Nâu':'#7b4a2a','Xanh navy':'#1f2f4d','Trắng':'#f2efe9','Xanh rêu':'#44513a','Hồng phấn':'#d9a7a7'};
+const BAG=['One size'],SHOE=['38','39','40','41','42','43'];
+const P=[
+{id:1,n:'Aurelia Tote',b:'Maison Aurelia',c:'bag',p:42500000,o:48000000,col:['Đen','Kem','Nâu'],s:BAG,r:4.9,t:'Mới',d:'Túi tote da bê Ý mềm mại, lót vải canvas, khóa nam châm vàng 18K mạ.'},
+{id:2,n:'Verona Mini Bag',b:'Casa Verona',c:'bag',p:28900000,col:['Đỏ rượu','Đen','Hồng phấn'],s:BAG,r:4.8,t:'Bán chạy',d:'Túi đeo chéo mini, dây xích có thể tháo rời, phù hợp dạ tiệc và dạo phố.'},
+{id:3,n:'Milano Satchel',b:'Casa Verona',c:'bag',p:35200000,col:['Nâu','Đen'],s:BAG,r:4.7,d:'Satchel da saffiano chống xước, ngăn laptop 14 inch, phong cách công sở.'},
+{id:4,n:'Celeste Clutch',b:'Atelier Celeste',c:'bag',p:18600000,o:22000000,col:['Kem','Đen','Xanh navy'],s:BAG,r:4.6,t:'-15%',d:'Clutch cầm tay da dập vân, khóa xoay kim loại sang trọng.'},
+{id:5,n:'Noir Bucket',b:'Maison Aurelia',c:'bag',p:31400000,col:['Đen','Xanh rêu'],s:BAG,r:4.8,d:'Túi bucket dây rút, da lì cao cấp, thiết kế tối giản thanh lịch.'},
+{id:6,n:'Regent Oxford',b:'Savile & Co',c:'shoe',p:19800000,col:['Đen','Nâu'],s:SHOE,r:4.9,t:'Thủ công',d:'Giày Oxford da bê đánh bóng thủ công, đế da khâu Goodyear welt.'},
+{id:7,n:'Strada Sneaker',b:'Casa Verona',c:'shoe',p:14500000,o:16900000,col:['Trắng','Đen','Kem'],s:SHOE,r:4.7,t:'-14%',d:'Sneaker da trơn đế cao su Ý, êm chân, phối được mọi trang phục.'},
+{id:8,n:'Opera Loafer',b:'Savile & Co',c:'shoe',p:16900000,col:['Nâu','Đen','Xanh navy'],s:SHOE,r:4.8,d:'Loafer da lộn, lót da dê mềm, charm kim loại nhỏ phía trước.'},
+{id:9,n:'Lumi Pump',b:'Atelier Celeste',c:'shoe',p:21300000,col:['Đỏ rượu','Đen','Kem'],s:['35','36','37','38','39'],r:4.6,t:'Mới',d:'Giày cao gót 8cm mũi nhọn, gót thanh, lót đệm êm cho cả ngày dài.'},
+{id:10,n:'Alpine Boot',b:'Savile & Co',c:'shoe',p:24800000,col:['Nâu','Đen'],s:SHOE,r:4.7,d:'Bốt da cổ ngắn, đế chống trượt, khóa kéo bên hông tiện lợi.'},
+{id:11,n:'Sable Wallet',b:'Maison Aurelia',c:'acc',p:8900000,col:['Đen','Đỏ rượu','Kem'],s:BAG,r:4.9,t:'Quà tặng',d:'Ví dài 12 ngăn thẻ, da bò Epsom, hộp quà cao cấp đi kèm.'},
+{id:12,n:'Heritage Belt',b:'Savile & Co',c:'acc',p:6200000,col:['Đen','Nâu'],s:['90','95','100','105'],r:4.5,d:'Dây nịt da bò nguyên tấm, khóa thép không gỉ mạ vàng.'}
+];
+const CATS=[['all','Tất cả'],['bag','Túi xách'],['shoe','Giày dép'],['acc','Phụ kiện']];
+const INFO={'Hướng dẫn mua hàng':'Chọn sản phẩm, màu và kích cỡ, thêm vào giỏ, đăng nhập rồi điền thông tin giao hàng để đặt đơn.','Chính sách đổi trả':'Đổi trả trong 30 ngày với sản phẩm còn nguyên tem, hộp và chưa qua sử dụng.','Bảo hành':'Bảo hành 24 tháng cho lỗi sản xuất, vệ sinh và chăm sóc da miễn phí trọn đời.','Vận chuyển':'Giao hỏa tốc nội thành trong 2 giờ, toàn quốc 2–4 ngày. Miễn phí cho đơn từ 50.000.000₫.','Điều khoản':'Bằng việc mua hàng, bạn đồng ý với các điều khoản sử dụng và chính sách bán hàng của MAISON LUXE.','Bảo mật':'Thông tin cá nhân của bạn chỉ được dùng để xử lý đơn hàng và không chia sẻ cho bên thứ ba.'};
+function Art({p,color}){const c=COL[color||p.col[0]],bg=color==='Đen'||p.col[0]==='Đen'&&!color?'#d9d2c5':'#efe9dd';
+ const dark=['#1d1b19','#7a1f2b','#7b4a2a','#1f2f4d','#44513a'].includes(c),hi=dark?'#ffffff30':'#00000018';
+ let g;
+ if(p.c==='bag')g=html`<g><path d="M72 88C72 40 128 40 128 88" fill="none" stroke=${c} strokeWidth="7"/><rect x="46" y="82" width="108" height="78" rx="12" fill=${c}/><path d="M46 100Q100 128 154 100V94Q100 122 46 94Z" fill=${hi}/><circle cx="100" cy="117" r="7" fill="#c9a55c"/></g>`;
+ else if(p.c==='shoe')g=html`<g><path d="M28 140V96Q62 96 82 78L102 96Q146 98 176 126L178 142Z" fill=${c}/><path d="M28 112Q60 112 82 92" fill="none" stroke=${hi} strokeWidth="5"/><rect x="26" y="140" width="154" height="13" rx="6" fill=${dark?'#efe9dd':'#2a2622'}/><path d="M104 98l8 10M114 102l8 10M124 106l8 10" stroke="#c9a55c" strokeWidth="3"/></g>`;
+ else g=html`<g><rect x="40" y="62" width="120" height="84" rx="12" fill=${c}/><rect x="40" y="62" width="120" height="30" rx="12" fill=${hi}/><rect x="86" y="92" width="28" height="22" rx="5" fill="#c9a55c"/></g>`;
+ return html`<svg viewBox="0 0 200 200"><defs><radialGradient id=${'g'+p.id+(color||'')} cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color=${bg}/></radialGradient></defs><rect width="200" height="200" fill=${'url(#g'+p.id+(color||'')+')'}/><ellipse cx="100" cy="164" rx="62" ry="6" fill="#0002"/>${g}</svg>`;}
+const Stars=({r})=>html`<span class="star">★ ${r.toFixed(1)}</span>`;
+
+function Detail({p,onClose,onAdd,wish,toggle}){
+ const [color,setColor]=useState(p.col[0]),[size,setSize]=useState(p.s.length===1?p.s[0]:null);
+ return html`<div class="mask" onClick=${onClose}><div class="modal" onClick=${e=>e.stopPropagation()}>
+ <button class="x" onClick=${onClose}>×</button>
+ <div><${Art} p=${p} color=${color}/></div>
+ <div class="pad"><div class="brand">${p.b}</div><h2 style=${{fontSize:30,margin:'4px 0 8px'}}>${p.n}</h2>
+ <div class="row" style=${{justifyContent:'flex-start',gap:12}}><${Stars} r=${p.r}/><span style=${{color:'var(--mut)',fontSize:13}}>Chính hãng · Bảo hành 24 tháng</span></div>
+ <p class="price" style=${{fontSize:22,margin:'12px 0'}}>${fmt(p.p)}${p.o&&html`<span class="old">${fmt(p.o)}</span>`}</p>
+ <p style=${{color:'var(--mut)'}}>${p.d}</p>
+ <b>Màu: ${color}</b><div class="opt">${p.col.map(c=>html`<button key=${c} class=${'sz'+(c===color?' on':'')} onClick=${()=>setColor(c)}><span style=${{display:'inline-block',width:12,height:12,borderRadius:'50%',background:COL[c],border:'1px solid #8884',marginRight:6,verticalAlign:'middle'}}></span>${c}</button>`)}</div>
+ <b>Kích cỡ</b><div class="opt">${p.s.map(s=>html`<button key=${s} class=${'sz'+(s===size?' on':'')} onClick=${()=>setSize(s)}>${s}</button>`)}</div>
+ <div style=${{display:'flex',gap:10}}><button class="btn gold" style=${{flex:1}} onClick=${()=>{if(!size)return onAdd(null);onAdd({p,color,size});onClose();}}>Thêm vào giỏ</button>
+ <button class="btn out" onClick=${()=>toggle(p.id)}>${wish.includes(p.id)?'♥':'♡'}</button></div>
+ </div></div></div>`;}
+
+function Cart({cart,setCart,onClose,onCheckout}){
+ const [code,setCode]=useState(''),[disc,setDisc]=useState(0);
+ const sub=cart.reduce((a,i)=>a+i.p.p*i.q,0),d=Math.round(sub*disc),ship=sub-d>=50000000||!sub?0:350000;
+ const chg=(k,dl)=>setCart(cart.map(i=>i.k===k?{...i,q:Math.max(0,i.q+dl)}:i).filter(i=>i.q>0));
+ const apply=()=>setDisc(code.trim().toUpperCase()==='LUXE10'?.1:0);
+ return html`<div class="mask" style=${{padding:0,justifyContent:'flex-end'}} onClick=${onClose}><div class="drawer" onClick=${e=>e.stopPropagation()}>
+ <div class="dh"><h2 style=${{fontSize:22}}>Giỏ hàng (${cart.reduce((a,i)=>a+i.q,0)})</h2><button class="ib" onClick=${onClose} style=${{fontSize:24}}>×</button></div>
+ <div class="db">${cart.length===0?html`<div class="empty">Giỏ hàng đang trống</div>`:cart.map(i=>html`<div class="li" key=${i.k}><div class="th"><${Art} p=${i.p} color=${i.color}/></div>
+  <div style=${{flex:1}}><b>${i.p.n}</b><div style=${{color:'var(--mut)',fontSize:13}}>${i.color} · ${i.size}</div>
+  <div class="row" style=${{marginTop:8}}><span class="qty"><button onClick=${()=>chg(i.k,-1)}>−</button>${i.q}<button onClick=${()=>chg(i.k,1)}>+</button></span><span class="price">${fmt(i.p.p*i.q)}</span></div></div></div>`)}</div>
+ ${cart.length>0&&html`<div class="df"><div class="cp"><input placeholder="Mã giảm giá (thử LUXE10)" value=${code} onChange=${e=>setCode(e.target.value)}/><button class="btn out" onClick=${apply}>Áp dụng</button></div>
+ <div class="sum"><span>Tạm tính</span><span>${fmt(sub)}</span></div>
+ ${d>0&&html`<div class="sum"><span>Giảm giá 10%</span><span>-${fmt(d)}</span></div>`}
+ <div class="sum"><span>Vận chuyển</span><span>${ship?fmt(ship):'Miễn phí'}</span></div>
+ <div class="sum t"><span>Tổng cộng</span><span>${fmt(sub-d+ship)}</span></div>
+ <button class="btn full" style=${{marginTop:12}} onClick=${()=>onCheckout(sub-d+ship)}>Thanh toán</button></div>`}
+ </div></div>`;}
+
+function Hero3D(){
+ const ref=React.useRef(null),cur=React.useRef(0),[idx,setIdx]=useState(0),[fail,setFail]=useState(false);
+ const L=[0,5,10].map(i=>P[i].n+' · '+fmt(P[i].p));
+ useEffect(()=>{cur.current=idx},[idx]);
+ useEffect(()=>{const t=setInterval(()=>setIdx(i=>(i+1)%3),7000);return()=>clearInterval(t)},[]);
+ useEffect(()=>{
+  const el=ref.current;if(!el||typeof THREE==='undefined'){setFail(true);return}
+  let R;try{R=new THREE.WebGLRenderer({antialias:true,alpha:true})}catch(e){setFail(true);return}
+  R.setPixelRatio(Math.min(window.devicePixelRatio||1,2));R.setSize(el.clientWidth,el.clientHeight);el.appendChild(R.domElement);
+  const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(34,el.clientWidth/el.clientHeight,.1,100);C.position.set(0,1.4,10);C.lookAt(0,-.2,0);
+  S.add(new THREE.HemisphereLight(0xfff1d6,0x2a2014,.9));
+  const key=new THREE.DirectionalLight(0xffe2b0,1.5);key.position.set(4,6,5);S.add(key);
+  const rim=new THREE.DirectionalLight(0x8fb4ff,.9);rim.position.set(-5,3,-4);S.add(rim);
+  const glow=new THREE.PointLight(0xd2ab62,1.4,16);glow.position.set(0,-1,3.5);S.add(glow);
+  const M=(c,r,m)=>new THREE.MeshStandardMaterial({color:c,roughness:r,metalness:m}),gold=M(0xd2ab62,.25,.9);
+  const mk=(g,m,x,y,z)=>{const o=new THREE.Mesh(g,m);o.position.set(x||0,y||0,z||0);return o};
+  const rr=(w,h,r)=>{const s=new THREE.Shape();s.moveTo(-w/2+r,-h/2);s.lineTo(w/2-r,-h/2);s.quadraticCurveTo(w/2,-h/2,w/2,-h/2+r);s.lineTo(w/2,h/2-r);s.quadraticCurveTo(w/2,h/2,w/2-r,h/2);s.lineTo(-w/2+r,h/2);s.quadraticCurveTo(-w/2,h/2,-w/2,h/2-r);s.lineTo(-w/2,-h/2+r);s.quadraticCurveTo(-w/2,-h/2,-w/2+r,-h/2);return s};
+  const ext=(s,d,b)=>{const g=new THREE.ExtrudeGeometry(s,{depth:d,bevelEnabled:true,bevelSize:b,bevelThickness:b,bevelSegments:5,curveSegments:16});g.center();return g};
+  const stage=new THREE.Group();S.add(stage);
+  stage.add(mk(new THREE.CylinderGeometry(2.7,2.9,.2,64),M(0x1a1713,.35,.6),0,-1.3,0));
+  const ring=mk(new THREE.TorusGeometry(2.72,.035,12,96),gold,0,-1.19,0);ring.rotation.x=Math.PI/2;stage.add(ring);
+  const bag=new THREE.Group();
+  bag.add(mk(ext(rr(2.6,1.7,.28),.9,.12),M(0x7a1f2b,.4,.08)));
+  bag.add(mk(ext(rr(2.64,.8,.25),1,.1),M(0x641722,.4,.08),0,.62,.04));
+  bag.add(mk(new THREE.BoxGeometry(.44,.36,.12),gold,0,.22,.62));
+  bag.add(mk(new THREE.TorusGeometry(.8,.07,16,48,Math.PI),M(0x4e1019,.5,.05),0,.95,0));
+  [-.8,.8].forEach(x=>bag.add(mk(new THREE.SphereGeometry(.11,16,16),gold,x,.95,0)));
+  bag.userData={s:1,y:-.2};
+  const shoe=new THREE.Group(),sp=new THREE.Shape();
+  sp.moveTo(-1.7,0);sp.lineTo(-1.7,1.15);sp.quadraticCurveTo(-1.5,1.4,-1.1,1.3);sp.lineTo(-.6,1.1);sp.quadraticCurveTo(-.2,.55,.3,.75);sp.quadraticCurveTo(1.5,.85,1.95,.3);sp.lineTo(1.95,0);sp.lineTo(-1.7,0);
+  shoe.add(mk(ext(sp,.9,.1),M(0x1d1b19,.35,.1),0,.1,0));
+  shoe.add(mk(ext(rr(3.9,.26,.12),1.05,.08),M(0xefe9dd,.6,0),0,-.6,0));
+  [[-.575,.57],[-.275,.46],[.025,.34]].forEach(([x,y])=>{const l=mk(new THREE.CylinderGeometry(.045,.045,.95,10),gold,x,y,0);l.rotation.x=Math.PI/2;shoe.add(l)});
+  shoe.userData={s:.85,y:-.52};
+  const wal=new THREE.Group();
+  wal.add(mk(ext(rr(2.4,1.5,.15),.35,.06),M(0x1d1b19,.4,.08)));wal.add(mk(new THREE.BoxGeometry(.4,.3,.06),gold,0,.25,.24));
+  wal.userData={s:1.25,y:-.19};
+  const items=[bag,shoe,wal];items.forEach(g=>{g.scale.setScalar(.001);g.visible=false;stage.add(g)});
+  const N=160,pg=new THREE.BufferGeometry(),pos=new Float32Array(N*3);
+  for(let i=0;i<N;i++){pos[i*3]=(Math.random()-.5)*10;pos[i*3+1]=(Math.random()-.5)*7;pos[i*3+2]=(Math.random()-.5)*6}
+  pg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+  const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xe3c487,size:.045,transparent:true,opacity:.8}));S.add(pts);
+  let mx=0,my=0,raf;const t0=performance.now();
+  const mm=e=>{const r=el.getBoundingClientRect();mx=Math.max(-.5,Math.min(.5,(e.clientX-r.left)/r.width-.5));my=Math.max(-.5,Math.min(.5,(e.clientY-r.top)/r.height-.5))};
+  const rs=()=>{const w=el.clientWidth,h=el.clientHeight;R.setSize(w,h);C.aspect=w/h;C.updateProjectionMatrix()};
+  window.addEventListener('pointermove',mm);window.addEventListener('resize',rs);
+  const tick=()=>{raf=requestAnimationFrame(tick);const t=(performance.now()-t0)/1000;
+   items.forEach((g,i)=>{const tg=cur.current===i?g.userData.s:.001,s=g.scale.x+(tg-g.scale.x)*.09;g.scale.setScalar(s);g.visible=s>.02;g.position.y=g.userData.y+Math.sin(t*1.6)*.07});
+   stage.rotation.y=t*.45+mx*1.2;stage.rotation.x=my*.25;pts.rotation.y=t*.04;R.render(S,C)};
+  tick();
+  return()=>{cancelAnimationFrame(raf);window.removeEventListener('pointermove',mm);window.removeEventListener('resize',rs);R.dispose();if(R.domElement.parentNode)R.domElement.parentNode.removeChild(R.domElement)};
+ },[]);
+ return html`<div class="cv"><div class="cvc" ref=${ref}>${fail&&html`<${Art} p=${P[[0,5,10][idx]]}/>`}</div>
+ <div class="cvn"><button class="ib" onClick=${()=>setIdx((idx+2)%3)}>‹</button><span>${L[idx]}</span><button class="ib" onClick=${()=>setIdx((idx+1)%3)}>›</button></div></div>`;}
+
+function Tile({p,label,sub,onGo}){
+ const [t,setT]=useState('');
+ const mv=e=>{const r=e.currentTarget.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;setT('perspective(700px) rotateY('+x*16+'deg) rotateX('+(-y*16)+'deg) translateZ(8px)')};
+ return html`<div class="tile" style=${{transform:t}} onMouseMove=${mv} onMouseLeave=${()=>setT('')} onClick=${onGo}><div class="ta"><${Art} p=${p}/></div><div class="tt"><h3>${label}</h3><span>${sub} →</span></div></div>`;}
+
+function Auth({onClose,onAuth,note}){
+ const [mode,setMode]=useState('in'),[f,setF]=useState({name:'',email:'',pw:''}),[err,setErr]=useState('');
+ const set=k=>e=>setF({...f,[k]:e.target.value});
+ const submit=()=>{const email=f.email.trim().toLowerCase();
+  if(!/^\S+@\S+\.\S+$/.test(email))return setErr('Email không hợp lệ');
+  if(f.pw.length<6)return setErr('Mật khẩu tối thiểu 6 ký tự');
+  const users=ls('ml_users')||[];
+  if(mode==='up'){if(!f.name.trim())return setErr('Vui lòng nhập họ tên');
+   if(users.find(u=>u.email===email))return setErr('Email đã được đăng ký');
+   ls('ml_users',[...users,{name:f.name.trim(),email,pw:f.pw}]);onAuth({name:f.name.trim(),email});}
+  else{const u=users.find(u=>u.email===email&&u.pw===f.pw);if(!u)return setErr('Sai email hoặc mật khẩu');onAuth({name:u.name,email});}};
+ return html`<div class="mask" onClick=${onClose}><div class="modal" style=${{gridTemplateColumns:'1fr',maxWidth:420}} onClick=${e=>e.stopPropagation()}><button class="x" onClick=${onClose}>×</button>
+ <div class="pad"><h2 style=${{fontSize:26,marginBottom:6}}>${mode==='in'?'Đăng nhập':'Tạo tài khoản'}</h2>
+ ${note&&html`<p style=${{color:'var(--gold)',margin:'0 0 8px'}}>${note}</p>`}
+ <div class="opt" style=${{marginTop:12}}><button class=${'sz'+(mode==='in'?' on':'')} onClick=${()=>{setMode('in');setErr('')}}>Đăng nhập</button><button class=${'sz'+(mode==='up'?' on':'')} onClick=${()=>{setMode('up');setErr('')}}>Đăng ký</button></div>
+ ${mode==='up'&&html`<div class="f"><label>Họ và tên</label><input value=${f.name} onChange=${set('name')}/></div>`}
+ <div class="f"><label>Email</label><input type="email" value=${f.email} onChange=${set('email')}/></div>
+ <div class="f"><label>Mật khẩu</label><input type="password" value=${f.pw} onChange=${set('pw')}/></div>
+ ${err&&html`<p style=${{color:'#c0392b',margin:'0 0 10px'}}>${err}</p>`}
+ <button class="btn gold full" onClick=${submit}>${mode==='in'?'Đăng nhập':'Đăng ký'}</button>
+ <p style=${{color:'var(--mut)',fontSize:12,marginTop:12}}>Bản demo: tài khoản được lưu ngay trên trình duyệt của bạn.</p></div></div></div>`;}
+
+function Orders({orders,onClose,onCancel}){
+ return html`<div class="mask" onClick=${onClose}><div class="modal" style=${{gridTemplateColumns:'1fr',maxWidth:620}} onClick=${e=>e.stopPropagation()}><button class="x" onClick=${onClose}>×</button>
+ <div class="pad"><h2 style=${{fontSize:26,marginBottom:14}}>Đơn hàng của tôi</h2>
+ ${orders.length===0?html`<div class="empty">Bạn chưa có đơn hàng nào</div>`:orders.map(r=>html`<div key=${r.id} style=${{border:'1px solid var(--line)',borderRadius:14,padding:14,marginBottom:12,background:'var(--card)'}}>
+  <div class="row"><b>${r.id}</b><span class=${'tag2'+(r.st==='Đã hủy'?' bad':'')}>${r.st}</span></div>
+  <div style=${{color:'var(--mut)',fontSize:13}}>${r.date} · ${r.pay} · ${r.addr}</div>
+  ${r.items.map(i=>html`<div class="row" key=${i.k} style=${{marginTop:8}}><span>${i.n} <span style=${{color:'var(--mut)',fontSize:13}}>(${i.color}, ${i.size}) ×${i.q}</span></span><span>${fmt(i.pr*i.q)}</span></div>`)}
+  <div class="row" style=${{marginTop:12}}><b>Tổng: ${fmt(r.total)}</b>${r.st==='Đang xử lý'&&html`<button class="btn out" style=${{padding:'6px 14px'}} onClick=${()=>onCancel(r.id)}>Hủy đơn</button>`}</div></div>`)}
+ </div></div></div>`;}
+
+function Checkout({total,user,onClose,onDone}){
+ const [f,setF]=useState({name:user?user.name:'',phone:'',addr:'',pay:'cod'});const set=k=>e=>setF({...f,[k]:e.target.value});
+ const ok=f.name.trim()&&/^[0-9+\s]{9,13}$/.test(f.phone)&&f.addr.trim();
+ return html`<div class="mask" onClick=${onClose}><div class="modal" style=${{gridTemplateColumns:'1fr',maxWidth:480}} onClick=${e=>e.stopPropagation()}><button class="x" onClick=${onClose}>×</button>
+ <div class="pad"><h2 style=${{fontSize:26,marginBottom:16}}>Thông tin giao hàng</h2>
+ <div class="f"><label>Họ và tên</label><input value=${f.name} onChange=${set('name')}/></div>
+ <div class="f"><label>Số điện thoại</label><input value=${f.phone} onChange=${set('phone')}/></div>
+ <div class="f"><label>Địa chỉ nhận hàng</label><input value=${f.addr} onChange=${set('addr')}/></div>
+ <div class="f"><label>Thanh toán</label><div class="opt" style=${{margin:0}}>${[['cod','Tiền mặt (COD)'],['card','Thẻ'],['bank','Chuyển khoản']].map(([k,l])=>html`<button key=${k} class=${'sz'+(f.pay===k?' on':'')} onClick=${()=>setF({...f,pay:k})}>${l}</button>`)}</div></div>
+ <div class="sum t" style=${{margin:'16px 0'}}><span>Tổng thanh toán</span><span>${fmt(total)}</span></div>
+ <button class="btn gold full" style=${{opacity:ok?1:.5}} disabled=${!ok} onClick=${()=>onDone(f)}>Đặt hàng</button></div></div></div>`;}
+
+function App(){
+ const [cat,setCat]=useState('all'),[q,setQ]=useState(''),[sort,setSort]=useState('def'),[wishOnly,setWO]=useState(false);
+ const [cart,setCart]=useState([]),[wish,setWish]=useState([]),[det,setDet]=useState(null),[open,setOpen]=useState(false),[co,setCo]=useState(null),[ord,setOrd]=useState(null),[toast,setToast]=useState('');
+ const [user,setUser]=useState(()=>ls('ml_user')),[orders,setOrders]=useState(()=>ls('ml_orders')||[]),[auth,setAuth]=useState(false),[pend,setPend]=useState(null),[showOrd,setShowOrd]=useState(false),[pmin,setPmin]=useState(''),[pmax,setPmax]=useState('');
+ const say=m=>{setToast(m);setTimeout(()=>setToast(''),2200)};
+ const [info,setInfo]=useState(null),[nl,setNl]=useState('');
+ const logout=()=>{setUser(null);ls('ml_user',null);setShowOrd(false);say('Đã đăng xuất')};
+ const onAuth=u=>{setUser(u);ls('ml_user',u);setAuth(false);say('Xin chào '+u.name);if(pend!==null){setCo(pend);setPend(null)}};
+ const cancel=id=>{const o=orders.map(r=>r.id===id?{...r,st:'Đã hủy'}:r);setOrders(o);ls('ml_orders',o);say('Đã hủy đơn '+id)};
+ const list=useMemo(()=>{let l=P.filter(p=>(cat==='all'||p.c===cat)&&(!wishOnly||wish.includes(p.id))&&(p.n+p.b).toLowerCase().includes(q.toLowerCase())&&(pmin===''||p.p>=pmin*1e6)&&(pmax===''||p.p<=pmax*1e6));
+  if(sort==='asc')l=[...l].sort((a,b)=>a.p-b.p);if(sort==='desc')l=[...l].sort((a,b)=>b.p-a.p);if(sort==='rate')l=[...l].sort((a,b)=>b.r-a.r);return l},[cat,q,sort,wishOnly,wish,pmin,pmax]);
+ const toggle=id=>setWish(w=>w.includes(id)?w.filter(x=>x!==id):[...w,id]);
+ const add=x=>{if(!x)return say('Vui lòng chọn kích cỡ');const k=x.p.id+x.color+x.size;
+  setCart(c=>c.find(i=>i.k===k)?c.map(i=>i.k===k?{...i,q:i.q+1}:i):[...c,{k,p:x.p,color:x.color,size:x.size,q:1}]);say('Đã thêm vào giỏ hàng');};
+ const qc=p=>add({p,color:p.col[0],size:p.s.length===1?p.s[0]:null})||(p.s.length>1&&setDet(p));
+ const n=cart.reduce((a,i)=>a+i.q,0);
+ return html`<div>
+ <header class="top"><div class="bar"><div class="logo">MAISON<b>·</b>LUXE</div>
+ <input class="search" placeholder="Tìm túi, giày, thương hiệu…" value=${q} onChange=${e=>setQ(e.target.value)}/>
+ <button class="ib" onClick=${()=>setWO(!wishOnly)}>${wishOnly?'♥':'♡'}<span class="l">Yêu thích</span><span class="cnt">${wish.length}</span></button>
+ <button class="ib" onClick=${()=>setOpen(true)}>🛍<span class="l">Giỏ hàng</span><span class="cnt">${n}</span></button>
+ ${user?html`<button class="ib" onClick=${()=>setShowOrd(true)}>📦<span class="l">Đơn hàng</span></button><button class="ib" title="Đăng xuất" onClick=${logout}>👤<span class="l">${user.name.split(' ').pop()} ⏻</span></button>`:html`<button class="btn" style=${{padding:'8px 18px'}} onClick=${()=>setAuth(true)}>Đăng nhập</button>`}</div></header>
+ <section class="hero"><div class="h3"><div class="hcopy"><div class="brand" style=${{color:'#e3c487'}}>Bộ sưu tập Xuân Hè 2027</div><h1>Nghệ thuật của sự tinh tế</h1><p>Túi xách và giày dép chính hãng, chế tác thủ công từ da thượng hạng. Mã LUXE10 giảm 10% cho đơn đầu tiên.</p><div style=${{display:'flex',gap:10,flexWrap:'wrap'}}><button class="btn gold" onClick=${()=>document.getElementById('shop').scrollIntoView({behavior:'smooth'})}>Khám phá ngay</button><button class="btn out" style=${{color:'#f8f1e3',borderColor:'#f8f1e388'}} onClick=${()=>{setCat('bag');document.getElementById('shop').scrollIntoView({behavior:'smooth'})}}>Xem túi xách</button></div></div><${Hero3D}/></div></section>
+ <div class="mq"><div>${[0,1,2,3].flatMap(()=>['Maison Aurelia','Casa Verona','Atelier Celeste','Savile & Co']).map((b,i)=>html`<span key=${i}>${b.toUpperCase()} ✦</span>`)}</div></div>
+ <div class="tiles">${[['bag','Túi xách',P[0]],['shoe','Giày dép',P[5]],['acc','Phụ kiện',P[10]]].map(([k,l,p])=>html`<${Tile} key=${k} p=${p} label=${l} sub="Xem bộ sưu tập" onGo=${()=>{setCat(k);document.getElementById('shop').scrollIntoView({behavior:'smooth'})}}/>`)}</div>
+ <main class="wrap" id="shop"><div class="tools">${CATS.map(([k,l])=>html`<button key=${k} class=${'chip'+(cat===k?' on':'')} onClick=${()=>setCat(k)}>${l}</button>`)}
+ ${[['Dưới 15tr',0,15],['15–30tr',15,30],['Trên 30tr',30,'']].map(([l,a,b])=>html`<button key=${l} class=${'chip'+(pmin===String(a)&&pmax===String(b)?' on':'')} onClick=${()=>{setPmin(String(a));setPmax(String(b))}}>${l}</button>`)}
+ <span class="pr"><input type="number" min="0" placeholder="Từ" value=${pmin} onChange=${e=>setPmin(e.target.value)}/>–<input type="number" min="0" placeholder="Đến (triệu)" value=${pmax} onChange=${e=>setPmax(e.target.value)}/>${(pmin!==''||pmax!=='')&&html`<button class="ib" title="Xóa lọc giá" onClick=${()=>{setPmin('');setPmax('')}}>✕</button>`}</span>
+ <select class="sel" value=${sort} onChange=${e=>setSort(e.target.value)}><option value="def">Nổi bật</option><option value="asc">Giá tăng dần</option><option value="desc">Giá giảm dần</option><option value="rate">Đánh giá cao</option></select></div>
+ ${list.length===0?html`<div class="empty">${wishOnly?'Bạn chưa có sản phẩm yêu thích':'Không tìm thấy sản phẩm phù hợp'}</div>`:html`<div class="grid">${list.map(p=>html`<article class="card" key=${p.id}>
+  <div class="art" onClick=${()=>setDet(p)}><${Art} p=${p}/>${p.t&&html`<span class="tag">${p.t}</span>`}</div>
+  <button class="heart" style=${{position:'absolute',transform:'translateY(-100%)',marginTop:44}} onClick=${()=>toggle(p.id)}>${wish.includes(p.id)?'♥':'♡'}</button>
+  <div class="info"><div class="brand">${p.b}</div><h3 onClick=${()=>setDet(p)}>${p.n}</h3>
+  <div class="row"><span class="price">${fmt(p.p)}${p.o&&html`<span class="old">${fmt(p.o)}</span>`}</span><${Stars} r=${p.r}/></div>
+  <button class="btn full" style=${{marginTop:12,padding:'9px'}} onClick=${()=>qc(p)}>Thêm vào giỏ</button></div></article>`)}</div>`}
+ <div class="feat"><div><b>Chính hãng 100%</b>Hoàn tiền gấp đôi nếu phát hiện hàng giả.</div><div><b>Giao hàng hỏa tốc</b>Miễn phí cho đơn từ 50.000.000₫.</div><div><b>Đổi trả 30 ngày</b>Đổi size, đổi mẫu dễ dàng.</div><div><b>Bảo hành 24 tháng</b>Vệ sinh, chăm sóc da trọn đời.</div></div></main>
+ <footer><div class="ft">
+ <div><div class="logo" style=${{color:'var(--ink)',fontSize:22}}>MAISON<b>·</b>LUXE</div><p style=${{margin:'12px 0 0',maxWidth:300}}>Túi xách và giày dép cao cấp chính hãng, chế tác thủ công từ da thượng hạng.</p><div class="soc">${['FB','IG','YT','TK'].map(s=>html`<span key=${s} onClick=${()=>say('Đang cập nhật kênh '+s)}>${s}</span>`)}</div></div>
+ <div><h4>Mua sắm</h4>${[['bag','Túi xách'],['shoe','Giày dép'],['acc','Phụ kiện'],['all','Tất cả sản phẩm']].map(([k,l])=>html`<a key=${k} onClick=${()=>{setCat(k);document.getElementById('shop').scrollIntoView({behavior:'smooth'})}}>${l}</a>`)}</div>
+ <div><h4>Hỗ trợ</h4>${['Hướng dẫn mua hàng','Chính sách đổi trả','Bảo hành','Vận chuyển'].map(l=>html`<a key=${l} onClick=${()=>setInfo(l)}>${l}</a>`)}</div>
+ <div><h4>Liên hệ</h4><div>12 Nguyễn Huệ, Quận 1, TP.HCM</div><div>Hotline: 1900 8888</div><div>cskh@maisonluxe.vn</div><div>Mở cửa 9:00 – 21:00 hằng ngày</div>
+  <div class="nl"><input type="email" placeholder="Email nhận ưu đãi" value=${nl} onChange=${e=>setNl(e.target.value)}/><button class="btn" style=${{padding:'9px 16px'}} onClick=${()=>{if(/^\S+@\S+\.\S+$/.test(nl.trim())){say('Cảm ơn bạn đã đăng ký nhận tin');setNl('')}else say('Email không hợp lệ')}}>Đăng ký</button></div></div>
+</div>
+<div class="fb"><span>© 2026 MAISON LUXE. Thương hiệu trong trang là minh họa.</span><div class="pay">${['VISA','MASTERCARD','MOMO','COD'].map(p=>html`<span key=${p}>${p}</span>`)}</div><span><span class="lk" onClick=${()=>setInfo('Điều khoản')}>Điều khoản</span> · <span class="lk" onClick=${()=>setInfo('Bảo mật')}>Bảo mật</span> · <span class="lk" onClick=${()=>window.scrollTo({top:0,behavior:'smooth'})}>↑ Lên đầu trang</span></span></div></footer>
+ ${det&&html`<${Detail} p=${det} onClose=${()=>setDet(null)} onAdd=${add} wish=${wish} toggle=${toggle}/>`}
+ ${open&&html`<${Cart} cart=${cart} setCart=${setCart} onClose=${()=>setOpen(false)} onCheckout=${t=>{setOpen(false);if(!user){setPend(t);setAuth(true)}else setCo(t)}}/>`}
+ ${co!==null&&html`<${Checkout} total=${co} user=${user} onClose=${()=>setCo(null)} onDone=${f=>{const id='ML'+Math.floor(100000+Math.random()*900000);const r={id,email:user.email,date:new Date().toLocaleString('vi-VN'),pay:{cod:'COD',card:'Thẻ',bank:'Chuyển khoản'}[f.pay],addr:f.addr,total:co,st:'Đang xử lý',items:cart.map(i=>({k:i.k,n:i.p.n,color:i.color,size:i.size,q:i.q,pr:i.p.p}))};const o=[r,...orders];setOrders(o);ls('ml_orders',o);setOrd({id,name:f.name,total:co});setCart([]);setCo(null)}}/>`}
+ ${ord&&html`<div class="mask" onClick=${()=>setOrd(null)}><div class="modal" style=${{gridTemplateColumns:'1fr',maxWidth:420,textAlign:'center'}} onClick=${e=>e.stopPropagation()}><div class="pad"><div style=${{fontSize:48}}>✨</div><h2>Đặt hàng thành công</h2><p style=${{color:'var(--mut)'}}>Cảm ơn ${ord.name}! Mã đơn <b style=${{color:'var(--gold)'}}>${ord.id}</b> · ${fmt(ord.total)}. Chúng tôi sẽ liên hệ xác nhận trong ít phút.</p><div style=${{display:'flex',gap:10,justifyContent:'center',flexWrap:'wrap'}}><button class="btn out" onClick=${()=>{setOrd(null);setShowOrd(true)}}>Xem đơn hàng</button><button class="btn" onClick=${()=>setOrd(null)}>Tiếp tục mua sắm</button></div></div></div></div>`}
+ ${auth&&html`<${Auth} note=${pend!==null?'Vui lòng đăng nhập để hoàn tất thanh toán':''} onClose=${()=>{setAuth(false);setPend(null)}} onAuth=${onAuth}/>`}
+ ${showOrd&&user&&html`<${Orders} orders=${orders.filter(r=>r.email===user.email)} onClose=${()=>setShowOrd(false)} onCancel=${cancel}/>`}
+ ${info&&html`<div class="mask" onClick=${()=>setInfo(null)}><div class="modal" style=${{gridTemplateColumns:'1fr',maxWidth:460}} onClick=${e=>e.stopPropagation()}><button class="x" onClick=${()=>setInfo(null)}>×</button><div class="pad"><h2 style=${{fontSize:24,marginBottom:10}}>${info}</h2><p style=${{color:'var(--mut)'}}>${INFO[info]}</p></div></div></div>`}
+ ${toast&&html`<div class="toast">${toast}</div>`}
+ </div>`;}
+ReactDOM.createRoot(document.getElementById('root')).render(html`<${App}/>`);
+</script>
+</body>
+</html>
